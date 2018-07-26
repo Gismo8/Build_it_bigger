@@ -20,14 +20,10 @@
  "id": "jokeApi:v1",
  "kind": "discovery#restDescription",
  "methods": {
-  "sayHi": {
+  "pushJoke": {
    "httpMethod": "POST",
-   "id": "jokeApi.sayHi",
+   "id": "jokeApi.pushJoke",
    "path": "pushJoke",
-   "request": {
-    "$ref": "JokeBean",
-    "parameterName": "resource"
-   },
    "response": {
     "$ref": "JokeBean"
    },

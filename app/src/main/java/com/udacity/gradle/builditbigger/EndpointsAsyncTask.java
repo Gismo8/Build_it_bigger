@@ -52,7 +52,7 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
         }
 
         try {
-            return myApiService.sayHi(new JokeBean()).execute().getJoke();
+            return myApiService.pushJoke().execute().getJoke();
         } catch (IOException e) {
             return e.getMessage();
         }

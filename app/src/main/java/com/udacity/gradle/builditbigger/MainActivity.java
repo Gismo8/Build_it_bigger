@@ -1,26 +1,25 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-import com.example.jokeactivity.JokeActivity;
 import com.example.joketeller.JokeTeller;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    JokeTeller jokeTeller;
+    //JokeTeller jokeTeller;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //jokeTeller = new JokeTeller();
         setContentView(R.layout.activity_main);
-        jokeTeller = new JokeTeller();
+        getSupportFragmentManager().beginTransaction().
+                add(R.id.fragment, new com.udacity.gradle.builditbigger.MainActivityFragment()).commit();
     }
 
 
